@@ -1,0 +1,36 @@
+import java.util.*;
+class Main
+{
+  public static void main(String args[])
+  {
+    //Try out your code here
+    Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    int[][]arr=new int[size][size];
+    int[][]ans=new int[size][size];
+    for(int i=0;i<size;i++){
+     for(int j=0;j<size;j++){
+      arr[i][j]=sc.nextInt(); 
+     }
+    }
+    for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+          ans[i][j]=arr[j][i];
+        }
+    }
+       for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+          System.out.print(arr[i][j]+" ");
+        }
+       System.out.println();
+    }
+System.out.println("Transpose matrix is:");
+     for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+          System.out.print(ans[i][j]+" ");
+        }
+       System.out.println();
+    }
+   
+  }
+}
